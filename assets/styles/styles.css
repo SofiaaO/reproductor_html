@@ -1,0 +1,130 @@
+*{
+    /*Reseteo de estilos*/
+    box-sizing: border-box;
+    margin: 0%;
+    font-family: 'roboto', sans-serif;
+    font-weight: 400;
+    outline: none;
+    list-style: none;
+}
+
+
+
+
+body {
+    background-color: rgb(0, 0, 0);
+}
+
+.user-box{
+    display: flex;
+    width: 1000px;
+    height: 50px;
+    border: 1px solid #ccc;
+    padding: 1.2rem;
+    margin: 20px;
+    margin-top: 0;
+    background-color: #1D1B1C;
+    float: right;
+}
+
+.user{
+    display: flex;
+    justify-content: end;
+    padding: 2rem;
+    align-items: end;
+}
+
+.playlist-box {
+    width: 280px;
+    height: 550px;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin: 20px;
+    background-color: #1D1B1C;
+}
+
+.playlist-box h2 {
+    margin-bottom: 20px;
+}
+
+.playlist-box ul {
+    list-style-type: none;
+    padding-right: 1rem;
+}
+
+.playbox ul {
+    transition: background-color 2s;
+  }
+  
+  .playbox ul:hover {
+    background-color: #B0C4B1;
+
+  }
+
+h1{
+    float: right;
+    width: 1000px;
+    height: 20px;
+    padding: 1.7rem;
+    position: relative;
+    top: -540px;
+    color: #ccc
+}
+.center-box{
+    float: right;
+    width: 1000px;
+    top: 0%;
+    height: 450px;
+    border: 1px solid #ccc;
+    padding: 1.7rem;
+    position: relative;
+    top: -540px;
+    margin: 20px;
+    background-color: #1D1B1C;
+}
+
+
+.cancion {
+    padding: 1rem;
+    width: 155px;
+    height: 180px;
+    background-color: #282526;
+    border: 1px solid #3D4250;
+    
+ }
+
+.footer {
+        position: fixed;
+        margin: 20px;
+        margin-top: -6%;
+        width: 1310px;
+        height: 130px;
+        background-color: #B2A991;
+        z-index: 1000000; /* sirve para sobreponer ante todo*/
+      }
+
+.playbox ul{
+    display: flex;
+    width: 1000px;
+    height: 50px;
+    padding: 5pt;
+    margin: 20px;
+    justify-content: flex-start;
+}
+li{
+    color: #ccc;
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+}
+.reproductor{
+    display: flex;
+}
+.footer div{
+    display: flex;
+    justify-content: flex-start;
+    padding: 5pt;
+    margin: 20px;
+   
+}
