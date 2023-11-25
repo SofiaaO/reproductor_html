@@ -14,14 +14,14 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 
 body {
-background-color: rgb(0, 0, 0);
+background-color: #100f10;
 overflow-x: hidden;
 min-height: 100%;
 min-width: 100%;
 color: #ccc;
 }
 header {
-    width: 30%;
+    width: 70%;
 }
 .navbar{
     border-radius: 10px;
@@ -30,11 +30,9 @@ header {
     width: 100%;
     border: 1px solid #3D4250;
     padding: 4pt;
-    margin: 20px;
-    margin-top: 0%;
+    margin: 30px;
     background-color: #1D1B1C;
     justify-content: space-between;
-    float: right;
     }
 
 .navbar .user{
@@ -42,6 +40,7 @@ display: flex;
 color: #ccc;
 padding-right: 40pt;
 align-items: center;
+gap: 1rem;
 }
 
 
@@ -50,7 +49,7 @@ align-items: center;
     position: static;
     border: 1px solid #3D4250;
     padding: 1rem;
-    margin: 20px;
+    margin: 30px;
     background-color: #1D1B1C;
 }
 
@@ -78,23 +77,23 @@ list-style-type: none;
 padding-right: 1rem;
 }
 
-.playbox ul li {
+.playbox ul {
     transition: background-color 2s;
     }
     
-    .playbox ul li:hover {
+    .playbox ul:hover {
     background-color: #53A69C;
     
     }
 
  h1{
   position: static;
-  float: right;
   width: 100%;
   height: 1px;
-  padding: 1rem;
+  padding: 2rem;
   color: #ccc;
-  text-align: end;
+  text-align: start;
+
 }
 .container {
     display: flex;
@@ -104,7 +103,7 @@ padding-right: 1rem;
 .center-box{
     border-radius: 10px;
     position: static;
-    margin: 20px;
+    margin: 30px;
     width: 70%;
     border: 1px solid #3D4250;
     margin-top: 50px;
@@ -114,18 +113,22 @@ padding-right: 1rem;
 #track-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 1em;
+    gap: 3em;
 }
 .cancion {
     padding: 1rem;
     width: 155px;
-    height: 188px;
     background-color: #282526;
     border: 1px solid #3D4250;
 }
-.text {
+.cancion .text {
     color: #53A69C;
 }
+
+.text{
+    color: #000000;
+}
+
 .footer {
     position: sticky;
     align-items: center;
@@ -133,17 +136,17 @@ padding-right: 1rem;
     left: 0%;
     width: 100%;    
     height: 150px;
-    background-color: #b2a991a9;
+    background-color: #b2a991de;
     z-index: 1000000; /* sirve para sobreponer ante todo*/
   }
   .footer{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     gap: 1rem;
     }
     .reproductor{
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
     align-items: center;
     }
     .footer div{
@@ -151,7 +154,7 @@ padding-right: 1rem;
     justify-content: flex-start;
     padding: 5pt;
     margin: 20px;
-    gap: 1rem;
+    gap: 3rem;
     }
 
     .footer .izq {

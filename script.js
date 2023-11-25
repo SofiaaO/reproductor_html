@@ -13,30 +13,46 @@ axios.get('https://leonardoapi.onrender.com/music')
             let component = document.createElement('ul')
             component.classList.add('cancion')
             component.innerHTML = `
-                <li><img src="https://www.lahiguera.net/musicalia/artistas/sza/disco/12611/sza_sos-portada.jpg" width="120" height="120" alt="Representacion visual de la portada del album de SZA"></li>
-                <li class="text">Shirt</li>
-                <li >SZA</li>
+                <li><img src="${cancion.path.front}" width="120" height="120" alt="Representacion visual de la portada del album de SZA"></li>
+                <li class="text">${cancion.title}</li>
+                <li >${cancion.author}</li>
             `
+
+
+            component.addEventListener('click', () => {
+
+
+                document.querySelector('#current-song-img')
+                .setAttribute('src', cancion.path.front)
+
+                document.querySelector('#current-song-audio')
+                .setAttribute('src', cancion.path.audio)
+
+                document.querySelector('#current-song-title').innerHTML = cancion.title
+
+                document.querySelector('#current-song-author').innerHTML = cancion.author
+
+                console.log(`Se hizo click en ${cancion.title}`)
+
+            })
+            document.querySelector('#pause').addEventListener('click', () => {
+                let audio = document.querySelector('#current-song-audio')
+
+                if (audio.paused) {
+                    audio.play()
+                } else {
+                    audio.pause()
+                }
+            })
 
             contenedor.appendChild(component)
 
         
-    
         } )
-
-
-
-
-
-
-
-
-
 
      }
 
 )
-
 
 
 
