@@ -1,4 +1,6 @@
-console.log(axios)
+let contenedor = document.querySelector('#track-list')
+
+
 
 axios.get('https://leonardoapi.onrender.com/music')
 .then(
@@ -8,10 +10,17 @@ axios.get('https://leonardoapi.onrender.com/music')
         canciones.map( (cancion) => {
 
 
+            let component = document.createElement('ul')
+            component.classList.add('cancion')
+            component.innerHTML = `
+                <li><img src="https://www.lahiguera.net/musicalia/artistas/sza/disco/12611/sza_sos-portada.jpg" width="120" height="120" alt="Representacion visual de la portada del album de SZA"></li>
+                <li class="text">Shirt</li>
+                <li >SZA</li>
+            `
 
+            contenedor.appendChild(component)
 
-            console.log (cancion.duration)
- 
+        
     
         } )
 
