@@ -20,7 +20,7 @@
     <title>Reproductor de Musica</title>
     <link rel="icon" href="/assets/images/logo_re-removebg-preview.png">
     <link rel="stylesheet" href="/assets/styles/styles.css">
-    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
@@ -55,8 +55,8 @@
     
     <main>
         <h1>Descubre música nueva</h1>
-        <section class="center-box">
-            <div>
+        <section class="center-box" >
+            <div id="track-list">
                 <ul class="cancion">
                     <li><img src="https://www.lahiguera.net/musicalia/artistas/sza/disco/12611/sza_sos-portada.jpg" width="120" height="120" alt="Representacion visual de la portada del album de SZA"></li>
                     <li class="text">Shirt</li>
@@ -166,9 +166,9 @@
     </main>
         
         <footer class="footer">
-            <div>
-                <img src="https://www.lahiguera.net/musicalia/artistas/sza/disco/12611/sza_sos-portada.jpg" width="50" height="50" alt="Representacion visual de la portada del album de SZA">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-deezer" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <div class="izq">
+                <img src="https://www.lahiguera.net/musicalia/artistas/sza/disco/12611/sza_sos-portada.jpg" width="80" height="80" alt="Representacion visual de la portada del album de SZA">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-deezer" width="50" height="50" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                     <path d="M3 16.5h2v.5h-2z" />
                     <path d="M8 16.5h2.5v.5h-2.5z" />
@@ -181,7 +181,8 @@
                     <path d="M8 13.5h2.5v-.5h-2.5z" />
                     <path d="M8 9.5h2.5v.5h-2.5z" />
                 </svg>
-                <ul><li>Shirt</li>
+                <ul>
+                    <li class="text">Shirt</li>
                     <li>SZA</li>
                 </ul>
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -193,7 +194,7 @@
 
             <div>
                 <ul class="reproductor">
-                    <li><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrows-shuffle-2" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <li><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrows-shuffle-2" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                         <path d="M18 4l3 3l-3 3" />
                         <path d="M18 20l3 -3l-3 -3" />
@@ -201,25 +202,25 @@
                         <path d="M3 17h3a5 5 0 0 0 5 -5a5 5 0 0 1 5 -5h5" />
                       </svg>
                     </li>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-track-prev" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <li><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-track-prev" width="40" height="40"  viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                         <path d="M21 5v14l-8 -7z" />
                         <path d="M10 5v14l-8 -7z" />
                       </svg>
                     </li>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-pause-filled" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <li><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-pause-filled" width="50" height="50" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                         <path d="M9 4h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h2a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2z" stroke-width="0" fill="currentColor" />
                         <path d="M17 4h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h2a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2z" stroke-width="0" fill="currentColor" />
                       </svg>
                     </li>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-track-next" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <li><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-track-next" width="40" height="40"  viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                         <path d="M3 5v14l8 -7z" />
                         <path d="M14 5v14l8 -7z" />
                       </svg>
                     </li>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-repeat" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <li><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-repeat" width="40" height="40"  viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                         <path d="M4 12v-3a3 3 0 0 1 3 -3h13m-3 -3l3 3l-3 3" />
                         <path d="M20 12v3a3 3 0 0 1 -3 3h-13m3 3l-3 -3l3 -3" />
@@ -252,6 +253,9 @@
                 <path d="M6 15h-2a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h2l3.5 -4.5a.8 .8 0 0 1 1.5 .5v14a.8 .8 0 0 1 -1.5 .5l-3.5 -4.5" />
               </svg>
             </div>
+
     </footer>
+    <script src="/script.js"></script>
+
 </body>
 </html>

@@ -52,10 +52,10 @@ align-items: center;
     border: 1px solid #3D4250;
     padding: 1rem;
     margin: 20px;
-    
     background-color: #1D1B1C;
 }
 
+    
 .playbox ul{
     display: flex;
     width: 1000px;
@@ -63,6 +63,7 @@ align-items: center;
     padding: 5pt;
     margin: 20px;
     justify-content: flex-start;
+    gap: 1rem;
 }
 
 .playlist-box .menu{
@@ -117,7 +118,7 @@ padding-right: 1rem;
     background-color: #282526;
     border: 1px solid #3D4250;
 }
-.cancion .text {
+.text {
     color: #53A69C;
 }
 .center-box div {
@@ -142,6 +143,7 @@ padding-right: 1rem;
     .reproductor{
     display: flex;
     gap: 1rem;
+    align-items: center;
     }
     .footer div{
     display: flex;
@@ -149,4 +151,9 @@ padding-right: 1rem;
     padding: 5pt;
     margin: 20px;
     gap: 1rem;
+    }
+
+    .footer .izq {
+        align-items: center;
+        gap: 1rem; 
     }

@@ -1,3 +1,54 @@
+console.log(axios)
+
+axios.get('https://leonardoapi.onrender.com/music')
+.then(
+    //Callback//
+    (response) => {
+        let canciones = response.data
+        canciones.map( (cancion) => {
+
+
+
+
+            console.log (cancion.duration)
+ 
+    
+        } )
+
+
+
+
+
+
+
+
+
+
+     }
+
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+let MifuncionFlecha= (num1, num2) => {
+    
+    return num1 / num2
+}
+
+console.log(MifuncionFlecha(10,2))
+
 let tipoNumero= 7.438043
 let tipoCadenaDeTexto= 'Hola Mundo'
 let tipoBooleano= false
@@ -19,7 +70,7 @@ let tipoLista=[
     tipoObjeto,
     tipoObjeto,
 ]
-/*
+
 if (2>6) {
     console.log("Se cumplió la condicion")
 } 
@@ -31,17 +82,6 @@ else {
 (2>6)
 ? console.log("Se cumplió la condicion")
 : console.log("No se cumplió la condición") */
-
-
-
-
-let MifuncionFlecha=
-(num1, num2) => {
-    
-    return num1 + num2
-}
-
-console.log(MifuncionFlecha(5,8))
 
 
  
