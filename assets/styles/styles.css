@@ -20,13 +20,14 @@ min-height: 100%;
 min-width: 100%;
 color: #ccc;
 }
-
+header {
+    width: 30%;
+}
 .navbar{
     border-radius: 10px;
     display: flex;
     position: static;
-    width: 1150px;
-    height: 50px;
+    width: 100%;
     border: 1px solid #3D4250;
     padding: 4pt;
     margin: 20px;
@@ -47,8 +48,6 @@ align-items: center;
 .playlist-box {
     border-radius: 10px;
     position: static;
-    width: 280px;
-    height: 950px;
     border: 1px solid #3D4250;
     padding: 1rem;
     margin: 20px;
@@ -58,8 +57,6 @@ align-items: center;
     
 .playbox ul{
     display: flex;
-    width: 1000px;
-    height: 50px;
     padding: 5pt;
     margin: 20px;
     justify-content: flex-start;
@@ -99,17 +96,25 @@ padding-right: 1rem;
   color: #ccc;
   text-align: end;
 }
+.container {
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+}
 .center-box{
     border-radius: 10px;
     position: static;
     margin: 20px;
-    width: 1150px;
-    height: 800px;
+    width: 70%;
     border: 1px solid #3D4250;
     margin-top: 50px;
     padding: 1.7rem;
-    float: right;
     background-color: #1D1B1C;
+}
+#track-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
 }
 .cancion {
     padding: 1rem;
@@ -120,10 +125,6 @@ padding-right: 1rem;
 }
 .text {
     color: #53A69C;
-}
-.center-box div {
-    display: flex;
-    justify-content: space-around
 }
 .footer {
     position: sticky;
