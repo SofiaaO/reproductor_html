@@ -34,6 +34,8 @@ axios.get('https://leonardoapi.onrender.com/music')
 
                 console.log(`Se hizo click en ${cancion.title}`)
 
+                
+
             })
             document.querySelector('#pause').addEventListener('click', () => {
                 let audio = document.querySelector('#current-song-audio')
@@ -44,7 +46,7 @@ axios.get('https://leonardoapi.onrender.com/music')
                     audio.pause()
                 }
             })
-
+           
             contenedor.appendChild(component)
 
         
